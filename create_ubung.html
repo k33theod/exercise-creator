@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- <link rel="shortcut icon"  href="./templates\static\favicon.ico"> -->
+        <link rel="stylesheet" href="create_ubung.css">
+        <title>Ubungen Creator</title>
+    </head>
+    <body>
+    
+        <!-- 1st page -->
+        <div class = "step1" id = "step1">
+            <h1>STEP 1 : Write or paste your text</h1>
+            <h3>Click on GO TO STEP 2 button when you are ready</h3>
+            <form >
+                <fieldset>
+                <legend>Exersise</legend>
+                    Field:
+                    <input type="text" name="exercise_field" value="English" id = "field">
+                    Exersise No:
+                    <input type="text" name="Ex_Number" value="Ex.Number" id ="ex_no">
+                    Total Points:
+                    <input id = "total_sum" type="number" value="100"><br>
+                <br/>
+                <br/>
+                <textarea name="message" rows="20" cols="100" id = "papa_text"  placeholder="Paste here your text...">
+
+                </textarea><br>
+                <p></p>
+                <input  class='button result' value='GO TO STEP 2' id='gotostep2'   type='button'><br>
+                </fieldset>
+            </form>
+        </div>
+        <!-- End of 1st page -->
+        <!-- 2nd page -->
+        <div id = "step2" class = "step2" style="visibility: hidden">
+            <h1>STEP 2 : Create your exercise</h1>
+            <h3>Use REMOVE SELECTION button to create 1 gap each time</h3>
+            <h3>Use the GO TO STEP 3 button when ready to try your exercese</h3>
+            
+            <p style='width:100ch; text-align: justify' id="papa">
+                hi there
+            </p>
+            
+            <input name='button' class='step2' value='REMOVE SELECTION' id='remove_selection'   type='button'>
+            <input name='button' class='step2' value='GO TO STEP 3' id='gotostep3'   type='button'>
+            <p style = "max-width:100ch ">You have creted <span id = "number_of_gaps"> </span> gaps <br/>The words for the gaps are : [<span id = "words"> </span>]  </p>
+            <input type="checkbox" id = "include_answer"> Check if you want a list of anwers to be included to your exercise.  
+            
+        </div>
+        <!-- End of 2nd page -->
+        <!-- 3nd page -->
+        <div id = "step3" class = "step3" style="visibility: hidden">
+            <h1>STEP 3 : Try your exercise</h1>
+            <h3>Use VIEW RESULTS button when ready to see your result</h3>
+            <h3>Use the SHOW RIGHT ANSWERS button to get the solutions</h3>
+            
+            <p style='width:100ch; text-align: justify' id="selected_words2">
+                
+            </p>
+
+            <p style='width:100ch; text-align: justify' id="papa2">
+                
+            </p>
+            
+            <input class="step3"  name='button'  value='VIEW RESULTS' id='view_results'   type='button'>
+            <input class="step3" value='SHOW RIGHT ANSWERS' id='show_right_answers'   type='button'>
+            <input value='SEND TO SERVER' id='send_to_server'   type='button'>
+            <p class = "step3" id ="show_score"> 
+            YOUR SCORE IS <span id="score">?? </span> POINTS.
+            </p>
+            <p id = "demo">here is your answer from server</p>
+        </div>
+        <!-- End of 3nd page -->
+        <script src="create_ubung.js"></script>
+    </body>
+</html>

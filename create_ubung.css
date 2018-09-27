@@ -1,0 +1,9 @@
+p input {
+    border: 0;
+    border-bottom: 1px solid black;
+}
+
+p, ol, form {
+    width:100ch;
+  
+}
